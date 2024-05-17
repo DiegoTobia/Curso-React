@@ -114,6 +114,23 @@ header .encabezado .format-link {
 header .encabezado .format-link:hover {
   text-decoration: underline;
 }
+
+header .encabezado .icono-carrito {
+  width: 2em;
+}
+
+header .encabezado .icono-carrito {
+  position: relative;
+}
+
+header .encabezado .cant-prod-carrito {
+  position: absolute;
+  right: -0.25rem;
+  bottom: 0.75rem;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
 @media (max-width: 770px) {
   header .encabezado .menu {
     display: block;

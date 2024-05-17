@@ -6,6 +6,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 
 import './App.css'
 import NavBar from "./components/NavBar"
+import ItemListContainer from "./components/ItemListContainer"
 
 function App() {
   //const [count, setCount] = useState(0)
@@ -14,6 +15,8 @@ function App() {
     <>
       
       <NavBar />
+
+      <ItemListContainer nombre={"Diego"}/>
 
     </>
   )
