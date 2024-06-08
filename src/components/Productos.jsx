@@ -4,13 +4,15 @@ import { useParams, useNavigate } from "react-router-dom";
 
 import { useState, useEffect } from 'react'
 
-const Pinturas = () => {
-
+const Productos = () => {
+    let { id } = useParams();
+    let tipo = id//String(id).toLowerCase()
+    console.log(tipo)
     const [precioMIN, setprecioMIN] = useState(0);
     const [ORDEN, setORDEN] = useState("recomendados");
 
-    const [productosFiltrados, setProductosFiltrados] = useState(data.filter(pintura => pintura.tipo === "pinturas"));
-    const [productosOrdenados, setProductosOrdenados] = useState(data.filter(pintura => pintura.tipo === "pinturas"));
+    const [productosFiltrados, setProductosFiltrados] = useState(data.filter(producto => producto.tipo === tipo));
+    const [productosOrdenados, setProductosOrdenados] = useState(data.filter(producto => producto.tipo === tipo));
 
     const [filtros, setFiltros] = useState({
         categorias: [],
@@ -20,10 +22,16 @@ const Pinturas = () => {
     });
 
     useEffect(() => {
+        let filtrados = data.filter(producto => producto.tipo === tipo);
+        setProductosFiltrados(filtrados);
+        ordenarProductos(ORDEN, filtrados);
+    }, [tipo]);
+
+    useEffect(() => {
 
         setprecioMIN(filtros.precioMin) 
 
-        let filtrados = data.filter(producto => producto.tipo === "pinturas");
+        let filtrados = data.filter(producto => producto.tipo === tipo);
 
         // Filtrar por precio
         filtrados = filtrados.filter(producto => producto.precio >= filtros.precioMin && producto.precio <= filtros.precioMax);
@@ -115,7 +123,16 @@ const Pinturas = () => {
             <div>
                 <div className="central">
                     <div className="ordenar">
-                        <h2 className="h2-pin-art">PINTURAS</h2>
+                            {tipo === "pinturas" ? (
+                                <>
+                                <h2 className="h2-pin-art">PINTURAS</h2>
+                                </>
+                            ) : (
+                                <>
+                                <h2 className="h2-pin-art">ACCESORIOS</h2>
+                                
+                                </>
+                            )}
                         <form>
                             <div>
                                 <select id="ordenar_select" defaultValue="recomendados" onChange={handleOrdenChange}>
@@ -131,12 +148,34 @@ const Pinturas = () => {
                     <div className="formato-pin-art">
                         <div className="menu-compra">
                             <h3 className="pad_button">Categorias</h3>
-                            <form> <input name="categorias" value="Agua" id="form_Agua" type="checkbox" onChange={handleFiltroChange}/> Al agua</form>
-                            <form> <input name="categorias" value="Exterior" id="form_Exterior" type="checkbox" onChange={handleFiltroChange}/> Exterior</form>
-                            <form> <input name="categorias" value="Pisos" id="form_Pisos" type="checkbox" onChange={handleFiltroChange}/> Pisos</form>
+                            {tipo === "pinturas" ? (
+                                <>
+                                <form> <input name="categorias" value="Agua" id="form_Agua" type="checkbox" onChange={handleFiltroChange}/> Al agua</form>
+                                <form> <input name="categorias" value="Exterior" id="form_Exterior" type="checkbox" onChange={handleFiltroChange}/> Exterior</form>
+                                <form> <input name="categorias" value="Pisos" id="form_Pisos" type="checkbox" onChange={handleFiltroChange}/> Pisos</form>
+                                </>
+                            ) : (
+                                <>
+                                <form> <input name="categorias" value="Lijas" id="form_Lijas" type="checkbox" onChange={handleFiltroChange}/> Lijas</form>
+                                <form> <input name="categorias" value="Pinceles" id="form_Pinceles" type="checkbox" onChange={handleFiltroChange}/> Pinceles</form>
+                                <form> <input name="categorias" value="Rodillos" id="form_Rodillos" type="checkbox" onChange={handleFiltroChange}/> Rodillos</form>
+                                <form> <input name="categorias" value="Rodillos" id="form_Guantes" type="checkbox" onChange={handleFiltroChange}/> Guantes</form>
+                                
+                                </>
+                            )}
                             <h3 className="pad_button">Marcas</h3>
-                            <form> <input name="marcas" value="Inca" id="form_Inca" type="checkbox" onChange={handleFiltroChange}/> Inca</form>
-                            <form> <input name="marcas" value="Pintelux" id="form_Pintelux" type="checkbox" onChange={handleFiltroChange}/> Pintelux</form>
+                            {tipo === "pinturas" ? (
+                                <>
+                                <form> <input name="marcas" value="Inca" id="form_Inca" type="checkbox" onChange={handleFiltroChange}/> Inca</form>
+                                <form> <input name="marcas" value="Pintelux" id="form_Pintelux" type="checkbox" onChange={handleFiltroChange}/> Pintelux</form>
+                                </>
+                            ) : (
+                                <>
+                                <form> <input name="marcas" value="greco" id="form_Greco" type="checkbox" onChange={handleFiltroChange}/> Greco</form>
+                                <form> <input name="marcas" value="pintelux" id="form_Pintelux" type="checkbox" onChange={handleFiltroChange}/> Pintelux</form>
+                                
+                                </>
+                            )}
                             <h3 className="pad_button">Precio</h3>
                             {/*<input className="input-n" id="form_precio" type="number" min="0" />*/}
                             <form className="inline-inputs">  
@@ -164,4 +203,4 @@ const Pinturas = () => {
     )
 }
 
-export default Pinturas;
+export default Productos;

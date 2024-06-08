@@ -8,8 +8,9 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 
 import './App.css'
 //import Home from "./components/Home"
-import Pinturas from "./components/Pinturas"
-import Accesorios from "./components/Accesorios"
+import Productos from "./components/Productos"
+//import Pinturas from "./components/Pinturas"
+//import Accesorios from "./components/Accesorios"
 import Error from "./components/Error"
 import NavBar from "./components/NavBar"
 import ItemListContainer from "./components/ItemListContainer"
@@ -24,10 +25,9 @@ function App() {
       <NavBar />
         <Routes>
           <Route path='/' element={<ItemListContainer nombre={"Diego"}/>}/> 
-          <Route path='/pinturas' element={<Pinturas />}/>
-          <Route path='/accesorios' element={<Accesorios />}/>
-          <Route path='/pinturas/:id' element={<ItemListContainer />}/>
-          <Route path='/accesorios/:id' element={<ItemListContainer />}/>
+          <Route path='/categoria/:id' element={<Productos />}/> 
+          {/* //tipo={":id"}  <Route path='/categoria/pinturas' element={<Productos tipo={"pinturas"} />}/>
+          <Route path='/categoria/accesorios' element={<Productos tipo={"accesorios"} />}/>*/}
           {/*<Route path='/item/:id' element={<ItemDetailContainer />}/>*/}
           <Route path='/*' element={<Error />}/>
         </Routes>

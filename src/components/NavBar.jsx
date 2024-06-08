@@ -3,7 +3,15 @@ import { Link } from "react-router-dom"
 import CartWidget from "./CartWidget"
 import cart from "../assets/cart.svg"
 
+import data from '../data/data.json';
+
 const NavBar = () => {
+
+    const atributos = [...new Set(data.map(producto => producto.tipo))];
+
+    const capitalizeFirstLetter = (string) => {
+        return string.toLowerCase().replace(/\b\w/g, (char) => char.toUpperCase());
+      };
 
     return(
         <header>
@@ -21,8 +29,15 @@ const NavBar = () => {
                     <div className="cabeza collapse navbar-collapse" id="navbarSupportedContent">  
                         <div className="nav">
                             <ul className="menu">
-                                <li className="nav-item menu-item"><Link to="/pinturas" className="nav-link active format-link">Pinturas</Link></li>
-                                <li className="nav-item menu-item"><Link to="/accesorios" className="nav-link active format-link">Accesorios</Link></li>
+                                
+                                {atributos.map((attr, index) => (
+                                    <li className="nav-item menu-item" key={index}>
+                                        <Link to={`/categoria/${attr}`} className="nav-link active format-link"> {capitalizeFirstLetter(attr)} </Link>
+                                    </li>
+                                ))}
+
+                                {/*<li className="nav-item menu-item"><Link to="/categoria/pinturas" className="nav-link active format-link">Pinturas</Link></li>
+                                <li className="nav-item menu-item"><Link to="/categoria/accesorios" className="nav-link active format-link">Accesorios</Link></li>*/}
                                 <li className="nav-item menu-item"><Link to="/" className="nav-link active format-link">Sucursal</Link></li>
                                 <li className="nav-item menu-item"><Link to="/" className="nav-link active format-link">Contacto</Link></li>
                             </ul>

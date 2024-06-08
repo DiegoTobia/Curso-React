@@ -1,7 +1,7 @@
 [
     {
         "id":1,
-        "img": "./src/data/img/cielo_raso.png",
+        "img": "../src/data/img/cielo_raso.png",
         "descripcion": "CIELOS RASOS INCA - 5.0LT",
         "tipo":"pinturas",
         "atributo": "exterior",
@@ -11,7 +11,7 @@
     },
     {
         "id":2,
-        "img": "./src/data/img/antioxido.png",
+        "img": "../src/data/img/antioxido.png",
         "descripcion": "ANTIOXIDO INCA - 3.2LT",
         "tipo":"pinturas",
         "atributo": "exterior",
@@ -21,7 +21,7 @@
     },
     {
         "id":3,
-        "img": "./src/data/img/membrana.png",
+        "img": "../src/data/img/membrana.png",
         "descripcion": "MEMBRANA IMPERMIABLE - 4.0LT",
         "tipo":"pinturas",
         "atributo": "exterior",
@@ -31,7 +31,7 @@
     },
     {
         "id":4,
-        "img": "./src/data/img/pisos.png",
+        "img": "../src/data/img/pisos.png",
         "descripcion": "PISOS - 2.5LT",
         "tipo":"pinturas",
         "atributo": "pisos",
@@ -41,7 +41,7 @@
     },
     {
         "id":5,
-        "img": "./src/data/img/rodillo.png",
+        "img": "../src/data/img/rodillo.png",
         "descripcion": "RODILLO - 23CM",
         "tipo":"accesorios",
         "atributo": "rodillos",
@@ -51,7 +51,7 @@
     },
     {
         "id":6,
-        "img": "./src/data/img/guantes.png",
+        "img": "../src/data/img/guantes.png",
         "descripcion": "GUANTES DE TEJIDO NEGRO",
         "tipo":"accesorios",
         "atributo": "guantes",
@@ -61,7 +61,7 @@
     },
     {
         "id":7,
-        "img": "./src/data/img/pincel.png",
+        "img": "../src/data/img/pincel.png",
         "descripcion": "PINCEL ESPECIAL -Nº22",
         "tipo":"accesorios",
         "atributo": "pinceles",
@@ -71,7 +71,7 @@
     },
     {
         "id":8,
-        "img": "./src/data/img/lija.png",
+        "img": "../src/data/img/lija.png",
         "descripcion": "LIJA AL AGUA GR.400",
         "tipo":"accesorios",
         "atributo": "lijas",
