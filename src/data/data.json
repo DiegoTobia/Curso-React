@@ -1,0 +1,82 @@
+[
+    {
+        "id":1,
+        "img": "./src/data/img/cielo_raso.png",
+        "descripcion": "CIELOS RASOS INCA - 5.0LT",
+        "tipo":"pinturas",
+        "atributo": "exterior",
+        "marca": "INCA",
+        "alt":"pintura para cielo raso",
+        "precio": 5099
+    },
+    {
+        "id":2,
+        "img": "./src/data/img/antioxido.png",
+        "descripcion": "ANTIOXIDO INCA - 3.2LT",
+        "tipo":"pinturas",
+        "atributo": "exterior",
+        "marca": "INCA",
+        "alt":"pintura antioxido",
+        "precio": 4249
+    },
+    {
+        "id":3,
+        "img": "./src/data/img/membrana.png",
+        "descripcion": "MEMBRANA IMPERMIABLE - 4.0LT",
+        "tipo":"pinturas",
+        "atributo": "exterior",
+        "marca": "INCA",
+        "alt":"pintura impermiabilizante",
+        "precio": 7200
+    },
+    {
+        "id":4,
+        "img": "./src/data/img/pisos.png",
+        "descripcion": "PISOS - 2.5LT",
+        "tipo":"pinturas",
+        "atributo": "pisos",
+        "marca": "INCA",
+        "alt":"pintura para pisos",
+        "precio": 1999
+    },
+    {
+        "id":5,
+        "img": "./src/data/img/rodillo.png",
+        "descripcion": "RODILLO - 23CM",
+        "tipo":"accesorios",
+        "atributo": "rodillos",
+        "marca": "GRECO",
+        "alt":"rodillo",
+        "precio": 449
+    },
+    {
+        "id":6,
+        "img": "./src/data/img/guantes.png",
+        "descripcion": "GUANTES DE TEJIDO NEGRO",
+        "tipo":"accesorios",
+        "atributo": "guantes",
+        "marca": "GRECO",
+        "alt":"guantes",
+        "precio": 99
+    },
+    {
+        "id":7,
+        "img": "./src/data/img/pincel.png",
+        "descripcion": "PINCEL ESPECIAL -Nº22",
+        "tipo":"accesorios",
+        "atributo": "pinceles",
+        "marca": "GRECO",
+        "alt":"pincel",
+        "precio": 299
+    },
+    {
+        "id":8,
+        "img": "./src/data/img/lija.png",
+        "descripcion": "LIJA AL AGUA GR.400",
+        "tipo":"accesorios",
+        "atributo": "lijas",
+        "marca": "GRECO",
+        "alt":"lija",
+        "precio": 39
+    }
+]

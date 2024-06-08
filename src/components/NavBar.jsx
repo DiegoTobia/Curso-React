@@ -21,8 +21,8 @@ const NavBar = () => {
                     <div className="cabeza collapse navbar-collapse" id="navbarSupportedContent">  
                         <div className="nav">
                             <ul className="menu">
-                                <li className="nav-item menu-item"><Link to="/products" className="nav-link active format-link">Pinturas</Link></li>
-                                <li className="nav-item menu-item"><Link to="/" className="nav-link active format-link">Accesorios</Link></li>
+                                <li className="nav-item menu-item"><Link to="/pinturas" className="nav-link active format-link">Pinturas</Link></li>
+                                <li className="nav-item menu-item"><Link to="/accesorios" className="nav-link active format-link">Accesorios</Link></li>
                                 <li className="nav-item menu-item"><Link to="/" className="nav-link active format-link">Sucursal</Link></li>
                                 <li className="nav-item menu-item"><Link to="/" className="nav-link active format-link">Contacto</Link></li>
                             </ul>
