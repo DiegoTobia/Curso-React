@@ -14,6 +14,7 @@ import Productos from "./components/Productos"
 import Error from "./components/Error"
 import NavBar from "./components/NavBar"
 import ItemListContainer from "./components/ItemListContainer"
+import ItemDetailContainer from "./components/ItemDetailContainer"
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
         <Routes>
           <Route path='/' element={<ItemListContainer nombre={"Diego"}/>}/> 
           <Route path='/categoria/:id' element={<Productos />}/> 
+          <Route path='/item/:id' element={<ItemDetailContainer />}/> 
           {/* //tipo={":id"}  <Route path='/categoria/pinturas' element={<Productos tipo={"pinturas"} />}/>
           <Route path='/categoria/accesorios' element={<Productos tipo={"accesorios"} />}/>*/}
           {/*<Route path='/item/:id' element={<ItemDetailContainer />}/>*/}

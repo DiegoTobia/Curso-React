@@ -1,4 +1,5 @@
 
+import { Link } from "react-router-dom"
 import React from 'react';
 
 const Catalogo = ({ data }) => {
@@ -6,7 +7,8 @@ const Catalogo = ({ data }) => {
         <ul className="prod-ventas" id="prod-ventas">
             {data.map((pintura) => (
                 <li key={pintura.id} className="imgs-productos">
-                    <img src={pintura.img} className="radio" alt={pintura.alt} />
+                    <Link to={`/item/${pintura.id}`} className="nav-link active format-link"> <img src={pintura.img} className="radio" alt={pintura.alt} /> </Link>
+                    {/* <img src={pintura.img} className="radio" alt={pintura.alt} /> */}
                     <p className="t-prod">{pintura.descripcion}</p>
                     <p className="t-prod precio">${pintura.precio}</p>
                     
